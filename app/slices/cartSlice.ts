@@ -8,10 +8,12 @@ export interface ItemsState {
       quantity: number;
     };
   };
+  totalItems: number;
 }
 
 const initialState: ItemsState = {
   items: {},
+  totalItems: 0,
 };
 
 export const cartSlice = createSlice({
@@ -25,6 +27,8 @@ export const cartSlice = createSlice({
       } else {
         state.items[action.payload.id].quantity += 1;
       }
+
+      state.totalItems += 1;
     },
   },
 });

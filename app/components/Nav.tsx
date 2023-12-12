@@ -3,9 +3,7 @@
 import { useAppSelector } from "../lib/hooks";
 
 const Nav = () => {
-  const cartItems = useAppSelector(
-    (state) => Object.keys(state.cart.items).length
-  );
+  const cartItems = useAppSelector((state) => state.cart.totalItems);
 
   return <nav>Nav. {cartItems}</nav>;
 };
