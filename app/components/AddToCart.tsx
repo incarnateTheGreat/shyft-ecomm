@@ -22,7 +22,7 @@ const AddToCart = ({ id, title, price, description, image }: ProductList) => {
         )
       }
     >
-      Add to Cart
+      Add
     </button>
   );
 };
