@@ -40,11 +40,9 @@ export const cartSlice = createSlice({
       state.totalItems -= itemTotalQuantity;
     },
     addQuantityFromItem: (state, action) => {
-      const itemTotalQuantity = state.items[action.payload].quantity;
-
       state.items[action.payload].quantity += 1;
 
-      state.totalItems += itemTotalQuantity;
+      state.totalItems += 1;
     },
     removeQuantityFromItem: (state, action) => {
       const cartItem = state.items[action.payload];
@@ -62,7 +60,7 @@ export const cartSlice = createSlice({
       if (itemTotalQuantity === 1) {
         state.totalItems = 0;
       } else {
-        state.totalItems -= itemTotalQuantity;
+        state.totalItems -= 1;
       }
     },
   },

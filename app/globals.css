@@ -13,3 +13,7 @@ body {
   background: -webkit-linear-gradient(var(--background-start));
   background: var(--background-start);
 }
+
+.button {
+  @apply bg-[#215a58] p-2 rounded w-28 hover:bg-[#163837];
+}

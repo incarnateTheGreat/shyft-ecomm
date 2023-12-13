@@ -12,7 +12,9 @@ const Nav = () => {
   return (
     <nav>
       <ul className="flex items-center justify-between">
-        <li className="text-4xl font-bold tracking-tighter">ShyftShop</li>
+        <li className="text-4xl font-bold tracking-tighter text-white">
+          ShyftShop
+        </li>
         <li>
           <Link href="/cart" title="Cart" className="relative">
             <Image src={cart_icon} alt="Cart icon" height={40} width={40} />

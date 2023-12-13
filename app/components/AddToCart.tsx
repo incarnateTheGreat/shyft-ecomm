@@ -23,10 +23,7 @@ const AddToCart = ({
 
   return (
     <button
-      className={classNames(
-        "bg-[#215a58] p-2 rounded w-28 hover:bg-[#163837]",
-        classnames
-      )}
+      className={classNames("button", classnames)}
       onClick={() =>
         dispatch(
           addToCart({
