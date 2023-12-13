@@ -23,7 +23,7 @@ const AddToCart = ({
 
   return (
     <button
-      className={classNames("button", classnames)}
+      className={classNames(classnames, "button")}
       onClick={() =>
         dispatch(
           addToCart({

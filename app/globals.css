@@ -17,3 +17,11 @@ body {
 .button {
   @apply bg-[#215a58] p-2 rounded w-28 hover:bg-[#163837];
 }
+
+.addButton {
+  @apply w-full;
+}
+
+.breakWord {
+  overflow-wrap: anywhere;
+}

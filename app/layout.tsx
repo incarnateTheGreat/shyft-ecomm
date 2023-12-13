@@ -26,12 +26,12 @@ export default function RootLayout({
       <StoreProvider>
         <body
           className={classNames(
-            "max-w-[1200px] flex flex-col px-8 mx-auto h-screen",
+            "max-w-[1200px] px-8 mx-auto min-h-screen flex flex-col",
             inter.className
           )}
         >
           <Header />
-          <main className="flex">{children}</main>
+          <main>{children}</main>
           <Footer />
         </body>
       </StoreProvider>
