@@ -46,22 +46,10 @@ export const cartSlice = createSlice({
     },
     removeQuantityFromItem: (state, action) => {
       const cartItem = state.items[action.payload];
-      const itemTotalQuantity = cartItem.quantity;
 
-      if (cartItem.quantity === 1) {
-        cartSlice.caseReducers.removeFromCart(state, {
-          payload: cartItem.id,
-          type: "",
-        });
-      } else {
-        cartItem.quantity -= 1;
-      }
+      cartItem.quantity -= 1;
 
-      if (itemTotalQuantity === 1) {
-        state.totalItems = 0;
-      } else {
-        state.totalItems -= 1;
-      }
+      state.totalItems -= 1;
     },
   },
 });

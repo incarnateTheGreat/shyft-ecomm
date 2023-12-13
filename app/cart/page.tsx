@@ -46,8 +46,9 @@ const Cart = () => {
                   <div>${price}</div>
                   <div className="flex my-2">
                     <button
+                      disabled={quantity === 1}
                       onClick={() => dispatch(removeQuantityFromItem(id))}
-                      className="border w-10 rounded bg-white text-black"
+                      className="border w-10 rounded bg-white text-black disabled:opacity-50"
                     >
                       -
                     </button>

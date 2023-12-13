@@ -17,20 +17,24 @@ type ProductList = {
 };
 
 async function loadProducts() {
-  const productsResponse: Response = await fetch(
-    `https://fakestoreapi.com/products`
-  );
+  try {
+    const productsResponse: Response = await fetch(
+      `https://fakestoreapi.com/products`
+    );
 
-  const productsResponseJson: ProductList[] = await productsResponse.json();
+    const productsResponseJson: ProductList[] = await productsResponse.json();
 
-  return productsResponseJson;
+    return productsResponseJson;
+  } catch (err) {
+    return [];
+  }
 }
 
 const ProductList = async () => {
   const productsData = await loadProducts();
 
   if (productsData.length === 0)
-    return <div>Sorry. There are no products.</div>;
+    return <div>Sorry. There are no available products.</div>;
 
   return (
     <div className="grid grid-cols-2 gap-x-8 gap-y-2 md:grid-cols-4 md:gap-8 mb-4">
@@ -53,10 +57,10 @@ const ProductList = async () => {
               <h2 className="text-lg md:text-2xl font-semibold breakWord">
                 {title}
               </h2>
-              <p className="text-sm py-2 hidden md:flex breakWord">
+              <h3 className="text-lg md:text-md font-semibold">${price}</h3>
+              <p className="mb-8 text-sm py-2 hidden md:flex breakWord">
                 {description}
               </p>
-              <div className="mb-8 text-sm md:text-md">${price}</div>
               <AddToCart classnames="mt-auto addButton" {...product} />
             </div>
           </div>

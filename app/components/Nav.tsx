@@ -19,7 +19,7 @@ const Nav = () => {
         <li>
           <Link href="/cart" title="Cart" className="relative">
             <CartIcon />
-            <div className="absolute text-xs text-white -top-0 -right-0.5 bg-[#225856] rounded-xl w-5 text-center">
+            <div className="absolute text-xs text-white -top-0 -right-0.5 bg-[var(--indicator)] rounded-xl w-5 text-center">
               {totalItems}
             </div>
           </Link>
