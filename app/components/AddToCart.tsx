@@ -36,7 +36,7 @@ const AddToCart = ({
         )
       }
     >
-      Add
+      Add to Cart
     </button>
   );
 };
