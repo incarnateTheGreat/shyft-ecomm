@@ -2,6 +2,8 @@ import classNames from "classnames";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 import Nav from "./components/Nav";
 import StoreProvider from "./StoreProvider";
 
@@ -28,13 +30,9 @@ export default function RootLayout({
             inter.className
           )}
         >
-          <header className="py-2 mb-2 sticky top-0 bg-[var(--background-start)] z-50">
-            <Nav />
-          </header>
+          <Header />
           <main className="flex">{children}</main>
-          <footer className="py-2 font-semibold border-t text-gray-50 border-t-gray-50 mt-auto">
-            &copy; {new Date().getFullYear()} ShyftShop Inc.
-          </footer>
+          <Footer />
         </body>
       </StoreProvider>
     </html>

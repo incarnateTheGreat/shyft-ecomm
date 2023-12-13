@@ -13,7 +13,9 @@ const Nav = () => {
     <nav>
       <ul className="flex items-center justify-between">
         <li className="text-4xl font-bold tracking-tighter text-white">
-          ShyftShop
+          <Link href="/" title="ShyftShop">
+            ShyftShop
+          </Link>
         </li>
         <li>
           <Link href="/cart" title="Cart" className="relative">
