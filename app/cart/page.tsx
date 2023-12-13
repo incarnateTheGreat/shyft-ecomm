@@ -7,6 +7,7 @@ import RemoveFromCart from "../components/RemoveFromCart";
 import { useAppDispatch, useAppSelector } from "../lib/hooks";
 import {
   addQuantityFromItem,
+  clearAllFromCart,
   removeQuantityFromItem,
 } from "../slices/cartSlice";
 
@@ -67,6 +68,12 @@ const Cart = () => {
           })}
         </div>
         <div className="text-white md:text-right my-4 md:mt-0">
+          <button
+            className="button mb-4"
+            onClick={() => dispatch(clearAllFromCart())}
+          >
+            Clear Cart
+          </button>
           <div className="text-xl font-semibold">Total</div>
           <div>${total.toFixed(2)}</div>
         </div>
