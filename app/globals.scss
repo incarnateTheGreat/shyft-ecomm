@@ -1,7 +1,9 @@
 // Pages
 @import "./cart/cart.module.scss";
+@import "./[...not-found]/NotFound.module.scss";
 
 // Components
+@import "./button.scss";
 @import "./components/Nav/Nav.module.scss";
 @import "./components/ProductList/ProductList.module.scss";
 @import "./components/Header/Header.module.scss";
@@ -53,60 +55,13 @@ blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
   margin: 0;
 }
 
-// Button styles
-.button {
-  background-color: var(--indicator);
-  border-radius: 0.25rem;
-  color: white;
-  font-size: 0.85rem;
-  padding: 0.5rem 1.5rem;
-
-  &:hover {
-    background-color: #163837;
-  }
-}
-
-[role=button], button {
-  cursor: pointer;
-}
-
-[type=button], [type=reset], [type=submit], button {
-  -webkit-appearance: button;
-  background-color: transparent;
-  background-image: none;
-}
-
-button, select {
-  text-transform: none;
-}
-
-button, input, optgroup, select, textarea {
-  color: inherit;
-  font-family: inherit;
-  font-feature-settings: inherit;
-  font-size: 100%;
-  font-variation-settings: inherit;
-  font-weight: inherit;
-  line-height: inherit;
-  margin: 0;
-  padding: 0;
-}
-
-[type=button], [type=reset], [type=submit], button {
-  -webkit-appearance: button;
-  background-color: transparent;
-  background-image: none;
-}
-button, select {
-  text-transform: none;
-}
-
-.addButton {
-  width: 100%;
-}
-
 .breakWord {
   overflow-wrap: anywhere;
+}
+
+main {
+  display: flex;
+  flex: 1;
 }
 
 .layout {
