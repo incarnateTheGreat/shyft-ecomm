@@ -42,7 +42,7 @@ const ProductList = async () => {
 
         return (
           <div key={id} className="container">
-            <ProductImage idx={idx} title={title} src={image} />
+            <ProductImage priority title={title} src={image} />
             <div className="productContents">
               <h2 className="breakWord">{title}</h2>
               <h3>${price.toFixed(2)}</h3>
