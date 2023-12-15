@@ -8,6 +8,7 @@
 @import "./components/Footer/Footer.module.scss";
 @import "./components/ProductImage/ProductImage.module.scss";
 
+// Default styles
 :root {
   --background: #195e5c;
   --foreground-rgb: 0, 0, 0;
@@ -52,6 +53,7 @@ blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
   margin: 0;
 }
 
+// Button styles
 .button {
   background-color: var(--indicator);
   border-radius: 0.25rem;
