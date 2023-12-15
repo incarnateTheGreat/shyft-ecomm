@@ -23,7 +23,7 @@ const Cart = () => {
 
   return (
     <Suspense fallback={<h2 className="suspense">Loading Cart...</h2>}>
-      <section>
+      <section className="cart">
         <div className="cartItems">
           {Object.keys(cartItems).map((key) => {
             const { id, image, title, price, quantity } = cartItems[key];
