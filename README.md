@@ -1,4 +1,4 @@
-## ShyftShop Inc.
+## ShyftShop
 
 Welcome to the ShyftShop. Your one-stop shop for everything Shyft-y!
 
