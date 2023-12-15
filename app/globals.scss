@@ -6,6 +6,7 @@
 @import "./components/ProductList/ProductList.module.scss";
 @import "./components/Header/Header.module.scss";
 @import "./components/Footer/Footer.module.scss";
+@import "./components/ProductImage/ProductImage.module.scss";
 
 :root {
   --background: #195e5c;
@@ -17,8 +18,8 @@ body {
   background: -webkit-linear-gradient(var(--background));
   background: var(--background);
   color: rgb(var(--foreground-rgb));
-  margin: 0;
   line-height: inherit;
+  margin: 0;
 }
 
 menu, ol, ul {
@@ -33,8 +34,8 @@ a {
 }
 
 img, video {
-  max-width: 100%;
   height: auto;
+  max-width: 100%;
 }
 
 audio, canvas, embed, iframe, img, object, svg, video {
@@ -43,8 +44,8 @@ audio, canvas, embed, iframe, img, object, svg, video {
 }
 
 *, :after, :before {
-  box-sizing: border-box;
   border: 0 solid #e5e7eb;
+  box-sizing: border-box;
 }
 
 blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
@@ -55,7 +56,8 @@ blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
   background-color: var(--indicator);
   border-radius: 0.25rem;
   color: white;
-  padding: 1rem 0;
+  font-size: 0.85rem;
+  padding: 0.5rem 1.5rem;
 
   &:hover {
     background-color: #163837;
@@ -77,13 +79,13 @@ button, select {
 }
 
 button, input, optgroup, select, textarea {
+  color: inherit;
   font-family: inherit;
   font-feature-settings: inherit;
-  font-variation-settings: inherit;
   font-size: 100%;
+  font-variation-settings: inherit;
   font-weight: inherit;
   line-height: inherit;
-  color: inherit;
   margin: 0;
   padding: 0;
 }
@@ -116,26 +118,4 @@ button, select {
 
 .suspense {
   color: white;
-}
-
-.imageContainer {
-  align-items: center;
-  background-color: white;
-  border-radius: 0.25rem 0.25rem 0 0;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  width: 100%;
-
-  @media (min-width: 768px) {
-      display: flex;
-      flex-direction: column;
-      width: 200px;
-  }
-
-  img {
-      height: auto;
-      padding: 1.5rem;
-      width: 100%;
-  }
 }

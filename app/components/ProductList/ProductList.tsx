@@ -1,6 +1,5 @@
-import Image from "next/image";
-
 import AddToCart from "../AddToCart/AddToCart";
+import ProductImage from "../ProductImage/ProductImage";
 
 type ProductList = {
   id: number | string;
@@ -43,15 +42,7 @@ const ProductList = async () => {
 
         return (
           <div key={id} className="container">
-            <div className="imageContainer">
-              <Image
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw"
-                width="0"
-                height="0"
-                alt={title}
-                src={image}
-              />
-            </div>
+            <ProductImage title={title} src={image} />
             <div className="productContents">
               <h2 className="breakWord">{title}</h2>
               <h3>${price.toFixed(2)}</h3>

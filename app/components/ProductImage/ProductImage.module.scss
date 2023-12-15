@@ -1,0 +1,20 @@
+.productImage {
+    align-items: center;
+    background-color: white;
+    border-radius: 0.25rem 0.25rem 0 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+
+    @media (min-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+    }
+    img {
+        height: auto;
+        padding: 1.5rem;
+        width: 100%;
+    }
+}

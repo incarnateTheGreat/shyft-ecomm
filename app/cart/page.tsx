@@ -1,8 +1,8 @@
 "use client";
 
 import { Suspense } from "react";
-import Image from "next/image";
 
+import ProductImage from "../components/ProductImage/ProductImage";
 import RemoveFromCart from "../components/RemoveFromCart/RemoveFromCart";
 import { useAppDispatch, useAppSelector } from "../lib/hooks";
 import {
@@ -32,15 +32,7 @@ const Cart = () => {
 
             return (
               <div key={id} className="cartItem">
-                <div className="imageContainer">
-                  <Image
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw"
-                    width="0"
-                    height="0"
-                    alt={title}
-                    src={image}
-                  />
-                </div>
+                <ProductImage title={title} src={image} />
                 <div className="cartContents">
                   <h2>{title}</h2>
                   <div>${price.toFixed(2)}</div>
