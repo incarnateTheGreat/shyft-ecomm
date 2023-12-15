@@ -1,0 +1,141 @@
+// Pages
+@import "./cart/cart.module.scss";
+
+// Components
+@import "./components/Nav/Nav.module.scss";
+@import "./components/ProductList/ProductList.module.scss";
+@import "./components/Header/Header.module.scss";
+@import "./components/Footer/Footer.module.scss";
+
+:root {
+  --background: #195e5c;
+  --foreground-rgb: 0, 0, 0;
+  --indicator: #132723;
+}
+
+body {
+  background: -webkit-linear-gradient(var(--background));
+  background: var(--background);
+  color: rgb(var(--foreground-rgb));
+  margin: 0;
+  line-height: inherit;
+}
+
+menu, ol, ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+audio, canvas, embed, iframe, img, object, svg, video {
+  display: block;
+  vertical-align: middle;
+}
+
+*, :after, :before {
+  box-sizing: border-box;
+  border: 0 solid #e5e7eb;
+}
+
+blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
+  margin: 0;
+}
+
+.button {
+  background-color: var(--indicator);
+  border-radius: 0.25rem;
+  color: white;
+  padding: 1rem 0;
+
+  &:hover {
+    background-color: #163837;
+  }
+}
+
+[role=button], button {
+  cursor: pointer;
+}
+
+[type=button], [type=reset], [type=submit], button {
+  -webkit-appearance: button;
+  background-color: transparent;
+  background-image: none;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button, input, optgroup, select, textarea {
+  font-family: inherit;
+  font-feature-settings: inherit;
+  font-variation-settings: inherit;
+  font-size: 100%;
+  font-weight: inherit;
+  line-height: inherit;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+[type=button], [type=reset], [type=submit], button {
+  -webkit-appearance: button;
+  background-color: transparent;
+  background-image: none;
+}
+button, select {
+  text-transform: none;
+}
+
+.addButton {
+  width: 100%;
+}
+
+.breakWord {
+  overflow-wrap: anywhere;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 1200px;
+  min-height: 100vh;
+  padding: 0 2rem;
+}
+
+.suspense {
+  color: white;
+}
+
+.imageContainer {
+  align-items: center;
+  background-color: white;
+  border-radius: 0.25rem 0.25rem 0 0;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+
+  @media (min-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      width: 200px;
+  }
+
+  img {
+      height: auto;
+      padding: 1.5rem;
+      width: 100%;
+  }
+}

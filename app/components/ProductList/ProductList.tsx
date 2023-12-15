@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import AddToCart from "./AddToCart";
+import AddToCart from "../AddToCart/AddToCart";
 
 type ProductList = {
   id: number | string;
@@ -37,31 +37,26 @@ const ProductList = async () => {
     return <div>Sorry. There are no available products.</div>;
 
   return (
-    <div className="grid grid-cols-2 gap-x-8 gap-y-2 md:grid-cols-4 md:gap-8 mb-4">
+    <div className="productList">
       {productsData.map((product) => {
         const { id, image, title, description, price } = product;
 
         return (
-          <div key={id} className="flex flex-col h-[700px] md:h-auto">
-            <div className="bg-white relative rounded-t h-full w-auto md:h-[500px] flex flex-col items-center justify-center">
+          <div key={id} className="container">
+            <div className="imageContainer">
               <Image
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw"
                 width="0"
                 height="0"
-                className="w-full h-auto p-6"
                 alt={title}
                 src={image}
               />
             </div>
-            <div className="px-2 py-4 text-white flex-1 flex flex-col basis-1/2">
-              <h2 className="text-lg md:text-2xl font-semibold breakWord">
-                {title}
-              </h2>
-              <h3 className="text-lg md:text-md font-semibold">${price}</h3>
-              <p className="mb-8 text-sm py-2 hidden md:flex breakWord">
-                {description}
-              </p>
-              <AddToCart classnames="mt-auto addButton" {...product} />
+            <div className="productContents">
+              <h2 className="breakWord">{title}</h2>
+              <h3>${price.toFixed(2)}</h3>
+              <p className="breakWord">{description}</p>
+              <AddToCart classnames="addButton" {...product} />
             </div>
           </div>
         );

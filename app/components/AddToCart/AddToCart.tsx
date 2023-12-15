@@ -2,10 +2,9 @@
 
 import classNames from "classnames";
 
-import { useAppDispatch } from "../lib/hooks";
-import { addToCart } from "../slices/cartSlice";
-
-import ProductList from "./ProductList";
+import { useAppDispatch } from "../../lib/hooks";
+import { addToCart } from "../../slices/cartSlice";
+import ProductList from "../ProductList/ProductList";
 
 type AddToCardProps = ProductList & {
   classnames?: string;

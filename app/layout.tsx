@@ -2,12 +2,11 @@ import classNames from "classnames";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Nav from "./components/Nav";
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
 import StoreProvider from "./StoreProvider";
 
-import "./globals.css";
+import "./globals.scss";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,12 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <StoreProvider>
-        <body
-          className={classNames(
-            "max-w-[1200px] px-8 mx-auto min-h-screen flex flex-col",
-            inter.className
-          )}
-        >
+        <body className={classNames("layout", inter.className)}>
           <Header />
           <main>{children}</main>
           <Footer />

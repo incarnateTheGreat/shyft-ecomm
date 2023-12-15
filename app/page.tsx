@@ -1,10 +1,10 @@
 import { Suspense } from "react";
 
-import ProductList from "./components/ProductList";
+import ProductList from "./components/ProductList/ProductList";
 
 export default function Home() {
   return (
-    <Suspense fallback={<h2 className="text-white">Loading...</h2>}>
+    <Suspense fallback={<h2 className="suspense">Loading...</h2>}>
       <ProductList />
     </Suspense>
   );

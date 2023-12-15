@@ -1,9 +1,8 @@
 "use client";
 
-import { useAppDispatch } from "../lib/hooks";
-import { removeFromCart } from "../slices/cartSlice";
-
-import ProductList from "./ProductList";
+import { useAppDispatch } from "../../lib/hooks";
+import { removeFromCart } from "../../slices/cartSlice";
+import ProductList from "../ProductList/ProductList";
 
 const RemoveFromCart = ({ id }: ProductList) => {
   const dispatch = useAppDispatch();

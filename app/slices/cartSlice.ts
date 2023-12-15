@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-import ProductList from "../components/ProductList";
+import ProductList from "../components/ProductList/ProductList";
 
 export interface ItemsState {
   items: {
