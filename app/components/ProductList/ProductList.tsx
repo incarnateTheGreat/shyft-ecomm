@@ -37,12 +37,12 @@ const ProductList = async () => {
 
   return (
     <div className="productList">
-      {productsData.map((product) => {
+      {productsData.map((product, idx) => {
         const { id, image, title, description, price } = product;
 
         return (
           <div key={id} className="container">
-            <ProductImage title={title} src={image} />
+            <ProductImage idx={idx} title={title} src={image} />
             <div className="productContents">
               <h2 className="breakWord">{title}</h2>
               <h3>${price.toFixed(2)}</h3>

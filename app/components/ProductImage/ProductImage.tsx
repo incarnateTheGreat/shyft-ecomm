@@ -4,14 +4,15 @@ import Image from "next/image";
 type ProductImageProps = {
   title: string;
   src: string;
+  idx: number;
 };
 
-const ProductImage = ({ title, src }: ProductImageProps) => {
+const ProductImage = ({ title, src, idx }: ProductImageProps) => {
   return (
     <Suspense fallback={<h2>Loading image...</h2>}>
       <figure className="productImage">
         <Image
-          priority
+          priority={idx <= 4}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw"
           width="0"
           height="0"
