@@ -4,6 +4,7 @@ import { Suspense } from "react";
 
 import ProductImage from "../components/ProductImage/ProductImage";
 import RemoveFromCart from "../components/RemoveFromCart/RemoveFromCart";
+import handleToast from "../lib/handleToast";
 import { useAppDispatch, useAppSelector } from "../lib/hooks";
 import {
   addQuantityFromItem,
@@ -57,7 +58,11 @@ const Cart = () => {
         <div className="total">
           <button
             className="button"
-            onClick={() => dispatch(clearAllFromCart())}
+            onClick={() => {
+              dispatch(clearAllFromCart());
+
+              handleToast("You have cleared your cart.");
+            }}
           >
             Clear Cart
           </button>

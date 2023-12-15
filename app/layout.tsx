@@ -1,3 +1,4 @@
+import { Toaster } from "react-hot-toast";
 import classNames from "classnames";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -26,6 +27,7 @@ export default function RootLayout({
         <StoreProvider>
           <Header />
           <main>{children}</main>
+          <Toaster />
           <Footer />
         </StoreProvider>
       </body>

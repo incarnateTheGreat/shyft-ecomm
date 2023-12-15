@@ -1,6 +1,7 @@
 "use client";
 
 import classNames from "classnames";
+import handleToast from "learning/app/lib/handleToast";
 
 import { useAppDispatch } from "../../lib/hooks";
 import { addToCart } from "../../slices/cartSlice";
@@ -23,7 +24,7 @@ const AddToCart = ({
   return (
     <button
       className={classNames(classnames, "button")}
-      onClick={() =>
+      onClick={() => {
         dispatch(
           addToCart({
             id,
@@ -32,8 +33,10 @@ const AddToCart = ({
             description,
             image,
           })
-        )
-      }
+        );
+
+        handleToast("You have added an item to the cart");
+      }}
     >
       Add to Cart
     </button>

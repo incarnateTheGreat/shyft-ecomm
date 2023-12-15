@@ -66,7 +66,9 @@ ShyftShop was built using the following tools:
 - Next.js
 - React
 - React-Redux (using Redux Toolkit)
-- SASS
+- Redux-Persist (to persist the user's cart)
+- SASS (for styling)
+- React-Hot-Toast (for toast notifications)
 
 ## Deploy on Vercel
 
